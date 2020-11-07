@@ -6,9 +6,6 @@ using UnityEngine;
 namespace AbilitySystem.Game
 {
 
-
-
-
     public interface IRangedAttack
     {
        
@@ -18,8 +15,6 @@ namespace AbilitySystem.Game
         void Shoot(Vector3 position, float direction);
        
     }
-
-
 
     public class DefaultRangedAttack : IRangedAttack
     {
@@ -93,6 +88,7 @@ namespace AbilitySystem.Game
     {
         public TripleShotAttack(IRangedAttack rangedAttack) : base(rangedAttack) { }
 
+       
         public override void Shoot(Vector3 position, float direction)
         {
             base.Shoot(position, direction - 45f);
